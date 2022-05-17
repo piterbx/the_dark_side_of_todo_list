@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (min-width:578px)" href="./css/medium.css">
+</head>
+<body>
+    <div class="todo-module">
+        <div class="todo-header">
+            <h1>TODO List</h1>
+            <div class="todo-input-area">
+                <input type="text" class="todo-input" placeholder="Type your note here" autofocus>
+                <button class="todo-btn todo-add-btn">Add</button>
+            </div>
+        </div>
+        <p class="todo-alert">No new notes.</p>
+        <ol class="todo-list">
+            <!-- <li class="todo-item todo-completed" id="34">
+                <div class="todo-item-nr">test1</div>
+                <p class="todo-item-content">Todofhgigi ff</p>
+                <div class="todo-item-settings">
+                    <button class="todo-item-btn accept-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M5 12l5 5l10 -10"></path>
+                         </svg>
+                    </button>
+                    <button class="todo-item-btn edit-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
+                            <line x1="13.5" y1="6.5" x2="17.5" y2="10.5"></line>
+                         </svg>
+                    </button>
+                    <button class="todo-item-btn delete-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                         </svg>
+                    </button>
+                </div>
+            </li> -->
+        </ol>
+    </div>
+    <div class="popup">
+        <div class="popup-bgc"></div>
+        <div class="popup-content">
+            <h2>Edit</h2>
+            <input type="text" class="popup-input" placeholder="Type edited task here">
+            <p class="popup-alert"></p>
+            <button class="popup-btn popup-confirm-btn">Confirm</button>
+            <button class="popup-btn popup-cancel-btn">Cancel</button>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

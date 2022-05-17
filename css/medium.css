@@ -1,0 +1,15 @@
+body .todo-header .todo-input-area {
+    flex-direction: row;
+    height: 90px;
+}
+
+body .todo-header .todo-input-area .todo-input {
+    width: 60%;
+    margin: 0;
+}
+
+body .todo-header .todo-input-area .todo-btn {
+    width: 120px;
+    margin-left: 5px;
+    margin-bottom: 0;
+}

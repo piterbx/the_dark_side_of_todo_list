@@ -1,0 +1,208 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --theme-primary-color: #ffffff;
+  --theme-background-color: #000000;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: var(--theme-primary-color);
+  background-color: var(--theme-background-color);
+  scrollbar-color: #cccccc #000000;
+  overflow: hidden;
+}
+
+body .todo-module {
+  width: 80%;
+  max-width: 1920px;
+  min-height: 80%;
+  height: 90%;
+  max-height: 1080px;
+  border: 2px solid var(--theme-primary-color);
+  border-radius: 5px;
+  overflow: auto;
+}
+
+body .todo-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  border-bottom: 2px solid var(--theme-primary-color);
+}
+
+body .todo-header .todo-input-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 110px;
+}
+
+body .todo-header .todo-input-area .todo-input {
+  display: inline-block;
+  width: 90%;
+  height: 40px;
+  padding: 5px;
+  color: var(--theme-primary-color);
+  background-color: var(--theme-background-color);
+  border: 2px solid var(--theme-primary-color);
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 15px 0 10px;
+}
+
+body .todo-header .todo-input-area .todo-btn {
+  display: inline-block;
+  width: 90%;
+  height: 40px;
+  background-color: var(--theme-primary-color);
+  border: 2px solid var(--theme-primary-color);
+  border-radius: 5px;
+  outline: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color .3s, color .3s;
+  margin-bottom: 10px;
+}
+
+body .todo-header .todo-input-area .todo-btn:hover {
+  background-color: var(--theme-background-color);
+  color: var(--theme-primary-color);
+}
+
+body .todo-list {
+  padding: 20px;
+  list-style-type: none;
+}
+
+.todo-alert {
+  text-align: center;
+  margin-top: 25px;
+}
+
+body .todo-list .todo-item {
+  display: grid;
+  grid-template-columns: 1fr 17fr 2fr;
+  height: 45px;
+  margin: 10px 0;
+  border: 2px solid var(--theme-primary-color);
+  border-radius: 5px;
+  background-color: rgba(24,24,24,.5);
+}
+
+body .todo-list .todo-item .todo-item-nr, body .todo-list .todo-item .todo-item-content, body .todo-list .todo-item .todo-item-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .todo-list .todo-item .todo-item-content {
+  justify-content: left;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid var(--theme-primary-color);
+  border-right: 2px solid var(--theme-primary-color);
+  overflow: auto;
+}
+
+body .todo-list .todo-item .todo-item-settings {
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+body .todo-list .todo-item .todo-item-settings .todo-item-btn {
+  background-color: var(--theme-background-color);
+  color: var(--theme-primary-color);
+  border: 0;
+  cursor: pointer;
+}
+
+body .todo-list .todo-item .todo-item-settings .todo-item-btn:hover {
+  opacity: .4;
+}
+
+.todo-completed {
+  font-style: italic;
+  font-size: smaller;
+  text-decoration: line-through;
+  opacity: .6;
+}
+
+/* popup */
+
+.popup {
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  z-index: 10;
+  transition: display .4s;
+}
+
+.popup .popup-bgc {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.6);
+  z-index: -1;
+}
+
+.popup .popup-content {
+  max-width: 350px;
+  width: 100%;
+  min-height: 250px;
+  height: auto;
+  background-color: var(--theme-background-color);
+  border: 2px solid var(--theme-primary-color);
+  border-radius: 5px;
+  padding: 20px;
+  overflow: auto;
+}
+
+.popup .popup-content .popup-input, .popup .popup-content .popup-btn {
+  display: inline-block;
+  width: 90%;
+  height: 40px;
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: var(--theme-primary-color);
+  background-color: var(--theme-background-color);
+  border: 2px solid var(--theme-primary-color);
+}
+
+.popup .popup-content .popup-btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color .3s, background-color .3s;
+}
+
+.popup .popup-content .popup-btn:hover {
+  color: var(--theme-background-color);
+  background-color: var(--theme-primary-color);
+}
